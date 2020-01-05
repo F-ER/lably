@@ -6,12 +6,13 @@ if($_POST){
 	$stu_name = $_POST['stu_name'];
 	$stu_num = $_POST['stu_num'];
 	$stu_major = $_POST['stu_major'];
+  $stu_email = $_POST['stu_email'];
 	
 	$ser_stu_qu = "select * from `stu` where `ac_id` = '$stu_num'";
 	$ser_stu_qu = mysqli_query($con , $ser_stu_qu);
 	if(mysqli_num_rows($ser_stu_qu) <= 0){
 					
-	$new_stu_qu = "INSERT INTO `stu`(`name`, `ac_id`, `major`) VALUES ('$stu_name','$stu_num','$stu_major')";
+	$new_stu_qu = "INSERT INTO `stu`(`name`, `ac_id`, `major`,`email`) VALUES ('$stu_name','$stu_num','$stu_major','$stu_email')";
 	$new_stu_qu = mysqli_query($con , $new_stu_qu);
 	if($new_stu_qu){
 		$last_id = $con->insert_id;
@@ -99,6 +100,10 @@ if($_POST){
                         <div class="form-group">
                           <label for="eventRegInput1">التخصص</label>
                           <input type="text" id="eventRegInput1" class="form-control" name="stu_major" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="eventRegInput1">البريد الاكتروني</label>
+                          <input type="text" id="eventRegInput1" class="form-control" name="stu_email" required>
                         </div>
                       </div>
                       <div class="form-actions center">

@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-$con = mysqli_connect("localhost" , "root" , "" , "lably") or die("No Database connection");
+$con = mysqli_connect("localhost" , "root" , "" , "email") or die("No Database connection");
 mysqli_query($con , "set character_set_server='utf8'");
 mysqli_query($con , "set names 'utf8'");
 

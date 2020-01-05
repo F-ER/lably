@@ -11,7 +11,7 @@
   <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
   <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
   <meta name="author" content="PIXINVENT">
-  <title>Lably
+  <title>Email
   </title>
   <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
   <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
@@ -49,7 +49,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           <li class="nav-item mr-auto">
             <a class="navbar-brand" href="index.html">
               <img class="brand-logo" alt="modern admin logo" src="app-assets/images/logo/logo.png">
-              <h3 class="brand-text">lably</h3>
+              <h3 class="brand-text">Home</h3>
             </a>
           </li>
           <li class="nav-item d-none d-md-block float-right"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="toggle-icon ft-toggle-right font-medium-3 white" data-ticon="ft-toggle-right"></i></a></li>
@@ -88,18 +88,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 				<span class="menu-title" data-i18n="nav.home.main">الرئيسية</span>
 			</a>
         </li>
-        <?php
-      
-      if($run_user['perm'] == "2" or "1"){
-      ?>
-
-        <li class=" nav-item">
-			<a href="./labs.php">
-				<i class="ft-sidebar"></i>
-				<span class="menu-title" data-i18n="nav.labs.main">المعامل</span>
-			</a>
-        </li>
-        <?php } ?>
+        
 		  <?php
 		  
 		  if($run_user['perm'] == "1"){
@@ -110,25 +99,9 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 				<span class="menu-title" data-i18n="nav.labs.main">الطلاب</span>
 			</a>
         </li>
-        <li class=" nav-item">
-			<a href="./teachers.php">
-				<i class="ft-briefcase"></i>
-				<span class="menu-title" data-i18n="nav.labs.main">المعلمين</span>
-			</a>
-      <li class=" nav-item">
-      <a href="./staff.php">
-        <i class="ft-briefcase"></i>
-        <span class="menu-title" data-i18n="nav.labs.main"> مسؤول مكتبة </span>
-      </a>
 
-        </li>
 		  <?php } ?>
-        <li class=" nav-item">
-			<a href="./library.php">
-				<i class="ft-feather"></i>
-				<span class="menu-title" data-i18n="nav.set.main">المكتبة</span>
-			</a>
-        </li>
+        
       </ul>
     </div>
   </div>

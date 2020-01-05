@@ -17,11 +17,12 @@ $error = 0;
 				$stu_name = $_POST['stu_name'];
 				$stu_num = $_POST['stu_num'];
 				$stu_major = $_POST['stu_major'];
-				
+				$stu_email = $_POST['stu_email'];
+
 				$ser_stu_qu = "select * from `stu` where `ac_id` = '$stu_num' and `id` <> '$stu_id'";
 				$ser_stu_qu = mysqli_query($con , $ser_stu_qu);
 				if(mysqli_num_rows($ser_stu_qu) <= 0){
-				$up_stu_qu = "UPDATE `stu` SET `name`='$stu_name',`ac_id`='$stu_num',`major`='$stu_major' WHERE `id` = '$stu_id'";
+				$up_stu_qu = "UPDATE `stu` SET `name`='$stu_name',`ac_id`='$stu_num',`major`='$stu_major',`email`='$stu_email' WHERE `id` = '$stu_id'";
 				if(mysqli_query($con , $up_stu_qu)){
 					?>
 <div class="row col-12 justify-content-md-center">
@@ -114,6 +115,11 @@ if($error > 0){
                         <div class="form-group">
                           <label for="eventRegInput1">التخصص</label>
                           <input type="text" id="eventRegInput1" class="form-control" name="stu_major" value="<?php echo $run_sel_stu['major']; ?>" required>
+                        </div>
+
+                         <div class="form-group">
+                          <label for="eventRegInput1">البريد الاكتروني </label>
+                          <input type="text" id="eventRegInput1" class="form-control" name="stu_email" value="<?php echo $run_sel_stu['email']; ?>" required>
                         </div>
                       </div>
                       <div class="form-actions center">

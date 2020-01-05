@@ -219,7 +219,7 @@ function myFunction() {
 						</thead>
                       <tbody>
 						  <?php
-		 $brow_qu = "SELECT * FROM `brow_book` ";
+		 $brow_qu = "SELECT * FROM `brow_book` #WHERE `brow_date`  BETWEEN '2019-11-25' and '$today' ";
 		 $brow_qu = mysqli_query($con , $brow_qu);
 		 $brow_num = 1 ;
 		 while($run_brow = mysqli_fetch_array($brow_qu))
@@ -239,7 +239,7 @@ function myFunction() {
                           <td class="border-top-0"><?php echo $run_book['name']; ?></td>
                           <td class="border-top-0"><?php echo $run_book['auth']; ?></td>
                           <td class="border-top-0"><?php echo $run_brow['brow_date']; ?></td>
-                          <td class="border-top-0"><?php echo $run_brow['brow_date']; ?></td>
+                          <td class="border-top-0"><?php echo $run_brow['back_date']; ?></td>
                           <td class="border-top-0"><?php echo $run_brow['tech_id']; ?></td>
                         </tr>
 						  <?php
